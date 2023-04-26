@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        Welcome To Tic Tac Toe!
+    </nav>
+
+    <!-- game -->
+    <div class="game-container flex">
+        <div class="tictactoe">
+            <div class="box br-top-none br-left-none" style="border-radius: 10px 0 0 0;" id="box-1"><span>X</span></div>
+            <div class="box br-top-none" id="box-2"><span>X</span></div>
+            <div class="box br-top-none br-right-none" style="border-radius: 0 10px 0 0;" id="box-3"><span>X</span></div>
+            <div class="box br-left-none" id="box-4"><span>X</span></div>
+            <div class="box " id="box-5"><span>X</span></div>
+            <div class="box br-right-none" id="box-6"><span>X</span></div>
+            <div class="box br-left-none br-bottom-none" style="border-radius: 0 0 0 10px;" id="box-7"><span>X</span></div>
+            <div class="box br-bottom-none" id="box-8"><span>X</span></div>
+            <div class="box br-right-none br-bottom-none" style="border-radius: 0 0 10px 0;" id="box-9"><span>X</span></div>
+        </div>
+        <div class="position">
+            <p>स्वागत करते हैं आपका इस उम्दा खेल में !</p>
+            <div class="buttons">
+                <span class="info pointer">Turn of X</span>
+                <div class="reset pointer">Reset</div>
+            </div>
+            <img src="./images/excited.gif" alt="" class="win-gif">
+        </div>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+</html>
