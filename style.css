@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Playfair+Display&family=Tiro+Devanagari+Hindi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200;300;400&display=swap');
 
 * {
     margin: 0;
@@ -61,14 +61,15 @@ body {
     font-size: 160%;
     align-items: center;
     font-family: 'Playfair Display', serif;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Tiro';
+    font-family: 'Lobster', cursive;
 }
 
 /* game */
 
 .game-container {
     padding: 50px 30px;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -91,12 +92,39 @@ body {
     height: 100%;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
-    font-size: 3vw;
+    font-family: 'Nunito', sans-serif;
+    font-size: 250%;
+    z-index: 2;
+}
+
+.box-disable {
+    pointer-events: none;
+}
+
+.win-bar {
+    background-color: rgba(210, 173, 255, 0);
+    animation: blink infinite 1.5s ease-in-out;
+}
+
+@keyframes blink {
+    50% {
+        background-color: rgba(201, 157, 255, 0.5);
+    }
+    50% {
+        background-color: rgba(201, 157, 255, 1);
+    }
+}
+
+.last-position {
+    background-color: rgb(210, 173, 255);
+    z-index: 1;
+
 }
 
 .box:hover {
     background-color: rgb(208, 169, 255);
+    cursor: pointer;
+    z-index: 1;
 }
 
 .box span {
@@ -155,8 +183,19 @@ body {
         flex-direction: column;
     }
 
+    .position {
+        justify-content: center;
+        align-items: center;
+    }
+
     .position p {
         text-align: center;
+    }
+
+    .position img {
+        width: 200px;
+        position: relative;
+        right: 20px;
     }
 
     .buttons {
