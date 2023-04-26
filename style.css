@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Playfair+Display&family=Tiro+Devanagari+Hindi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    transition: all .2s ease;
+}
+
+/* utility classes */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.br-bottom-none {
+    border-bottom: none !important;
+}
+
+.br-top-none {
+    border-top: none !important;
+}
+
+.br-right-none {
+    border-right: none !important;
+}
+
+.br-left-none {
+    border-left: none !important;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+/* utility classes */
+
+body {
+    background-color: rgb(229, 208, 255);
+}
+
+/* nav bar */
+
+.nav-bar {
+    display: flex;
+    height: 60px;
+    background-color: rgb(108, 34, 199);
+    width: 100%;
+    color: rgb(231, 212, 255);
+    justify-content: center;
+    font-size: 160%;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-family: 'DynaPuff', cursive;
+}
+
+/* game */
+
+.game-container {
+    padding: 50px 30px;
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tictactoe {
+    width: 100%;
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: repeat(3, 8vw);
+    grid-auto-rows: 8vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 2px solid black;
+    border-bottom: 3px solid black;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 3vw;
+}
+
+.box:hover {
+    background-color: rgb(208, 169, 255);
+}
+
+.box span {
+    visibility: hidden;
+}
+
+.position {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+    color: rgb(55, 18, 100);
+    font-weight: 600;
+    font-size: 18px;
+    gap: 25px;
+}
+
+.info {
+    padding: 10px 20px;
+    background-color: rgb(208, 169, 255);
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.reset {
+    margin-left: 10px;
+    padding: 9px 20px;
+    background-color: rgb(208, 169, 255);
+    border-radius: 5px;
+    display: inline;
+    font-size: 17px;
+    border: 2px solid rgba(55, 18, 100, 0);
+    display: none;
+}
+
+.reset:hover {
+    background-color: rgb(182, 122, 255);
+    border: 2px solid rgb(55, 18, 100);
+}
+
+.position p {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 25px;
+    color: rgb(84, 28, 152);
+}
+
+.position img {
+    width: 15vw;
+    visibility: hidden;
+}
+
+@media all and (max-width: 700px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    .position p {
+        text-align: center;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tictactoe {
+        grid-template-columns: repeat(3, 80px);
+        grid-auto-rows: 80px;
+        margin-bottom: 40px;
+        position: relative;
+        top: 20px;
+    }
+}
+
+@media all and (max-width: 880px) {
+
+    .info,
+    .reset {
+        font-size: 15px;
+    }
+
+    .position p {
+        font-size: 20px;
+    }
+
+    .box {
+        border: 1px solid black;
+    }
+}
