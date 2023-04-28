@@ -3,7 +3,7 @@ const reset = document.querySelectorAll('.reset')[0]
 const info = document.querySelectorAll('.info')[0]
 const winGif = document.querySelector('.win-gif')
 const clickAud = new Audio('./ting.mp3')
-const music = new Audio('./music.mp3')
+let music = new Audio('./music.mp3')
 const gameOver = new Audio('./gameover.mp3')
 
 
@@ -12,7 +12,7 @@ const gameOver = new Audio('./gameover.mp3')
 // to reset the game
 function resetGame () {
     for(let i = 0; i < boxes.length; i++) {
-        clickAud.play()
+        
         boxes[i].innerHTML = '';
         boxes[i].setAttribute('value', '');
         boxes[i].classList.remove('win-bar', 'box-disable')
@@ -48,6 +48,7 @@ function winPosition() {
             winArray[i].forEach(ele => boxes[ele].classList.add('win-bar'))
             winGif.style = `visibility: visible`
             reset.style = `display: inline;`
+            music = new Audio('./music.mp3')
             music.play()
         }
 
@@ -62,6 +63,7 @@ function winPosition() {
             winArray[i].forEach(ele => boxes[ele].classList.add('win-bar'))
             winGif.style = `visibility: visible`
             reset.style = `display: inline;`
+            music = new Audio('./music.mp3')
             music.play()
         }
     }
