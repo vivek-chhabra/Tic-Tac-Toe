@@ -1,6 +1,6 @@
 # 🎮 Tic Tac Toe Game
 
-**Welcome to the Tic Tac Toe Game project! This game allows two players to play against each other in the classic Tic Tac Toe game. It keeps track of whose turn it is for the next move and provides a cheerful song and a happy face cat GIF when a player wins. In case nobody wins, the game ends. There is also a reset button to start a new game.**
+**Welcome to the Tic Tac Toe Game project! This game allows two players to play against each other just like the classic Tic Tac Toe game. It keeps track of whose turn it is for the next move and provides a cheerful song and a happy face cat GIF when a player wins. In case nobody wins, the game ends. There is also a reset button to start a new game.**
 
 <br>
 
